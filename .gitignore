@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+*.pyc
+state/runtime_quotas.json
+state/paused_tasks.json
+state/tasks/*.json
+logs/*.jsonl
