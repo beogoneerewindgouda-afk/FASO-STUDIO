@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.1.0",
+  "policy_id": "pol_free_first_v1",
+  "project_id": "proj_faso_studio_001",
+  "free_tier_only": true,
+  "allow_paid_models": false,
+  "require_explicit_human_approval_for_paid": true,
+  "max_paid_spend_usd_without_approval": 0.0,
+  "on_quota_exceeded": "failover_to_qualified_free_agent",
+  "on_no_qualified_free_agent": "pause_task_and_alert_user",
+  "max_attempts_per_agent": 2,
+  "max_total_attempts_per_task": 4,
+  "redact_sensitive_data_in_logs": true
+}
