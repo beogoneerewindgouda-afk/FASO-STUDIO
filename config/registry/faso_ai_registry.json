@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.1.0",
+  "registry_id": "reg_faso_studio_v1",
+  "project_id": "proj_faso_studio_001",
+  "agents": [
+    {
+      "agent_id": "agent_gemini_flash_free_01",
+      "display_name": "Gemini Flash Free",
+      "provider_id": "google",
+      "model_id": "gemini-flash-latest",
+      "tier": "free",
+      "is_paid": false,
+      "secret_env_var": "GEMINI_API_KEY",
+      "primary_role": "analyse",
+      "secondary_roles": ["documentation_technique", "tests", "controle_qualite"],
+      "competence_scores": {
+        "analyse": 9,
+        "documentation_technique": 9,
+        "tests": 8,
+        "controle_qualite": 8,
+        "programmation": 7
+      },
+      "capabilities": ["text", "code"],
+      "limits": {
+        "rpm_limit": 15,
+        "rpd_limit": 1500
+      },
+      "status": "active"
+    },
+    {
+      "agent_id": "agent_deepseek_r1_free_02",
+      "display_name": "DeepSeek Free Coder",
+      "provider_id": "openrouter",
+      "model_id": "deepseek-free-tier",
+      "tier": "free",
+      "is_paid": false,
+      "secret_env_var": "OPENROUTER_API_KEY",
+      "primary_role": "programmation",
+      "secondary_roles": ["correction_bugs", "architecture_logicielle", "recherche_innovation"],
+      "competence_scores": {
+        "programmation": 9,
+        "correction_bugs": 9,
+        "architecture_logicielle": 8,
+        "recherche_innovation": 8
+      },
+      "capabilities": ["text", "code"],
+      "limits": {
+        "rpm_limit": 20,
+        "rpd_limit": 500
+      },
+      "status": "active"
+    },
+    {
+      "agent_id": "agent_qwen_coder_free_03",
+      "display_name": "Qwen Security & Code Free",
+      "provider_id": "openrouter",
+      "model_id": "qwen-coder-free-tier",
+      "tier": "free",
+      "is_paid": false,
+      "secret_env_var": "OPENROUTER_API_KEY",
+      "primary_role": "securite",
+      "secondary_roles": ["programmation", "correction_bugs", "tests"],
+      "competence_scores": {
+        "securite": 8,
+        "programmation": 8,
+        "correction_bugs": 8,
+        "tests": 7
+      },
+      "capabilities": ["text", "code"],
+      "limits": {
+        "rpm_limit": 20,
+        "rpd_limit": 500
+      },
+      "status": "active"
+    }
+  ]
+}
